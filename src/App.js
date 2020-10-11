@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Timer from "./timer.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>let's begin woooo hooooo !!!</p>
+          <a
+            className="App-link"
+            // href="https://reactjs.org"
+            href="https://openclassrooms.com/fr/courses/4286486-build-web-apps-with-reactjs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          <p>ok now {this.props.name} is happy :D</p>
+          <Timer />
+        </header>
+      </div>
+    );
+  }
+}
+function MyAPP() {
+  return <div>let's get get started</div>;
 }
 
-export default App;
+export { App as default, MyAPP };
