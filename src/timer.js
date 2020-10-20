@@ -2,12 +2,13 @@ import React from "react";
 import "./time.css";
 
 class Timer extends React.Component {
+  //this a useless programme dont bother your self stealing it
   constructor(props) {
     super(props);
     this.state = { date: new Date().toLocaleTimeString(), isFullD: false };
   }
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 0);
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
@@ -25,6 +26,7 @@ class Timer extends React.Component {
     this.setState({
       isFullD: !this.state.isFullD,
     });
+    this.tick();
   };
   render() {
     let btnTxt =

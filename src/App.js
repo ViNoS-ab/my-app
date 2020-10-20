@@ -26,8 +26,5 @@ class App extends React.Component {
     );
   }
 }
-function MyAPP() {
-  return <div>let's get get started</div>;
-}
 
-export { App as default, MyAPP };
+export { App as default };
